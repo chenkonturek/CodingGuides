@@ -28,7 +28,7 @@ Please delete options that are not relevant.
 - [ ] unit test fun1  
 - [ ] unit test fun2 
 
-**Test Configuration**:
+**Test Configuration** [optional]:
 * Firmware version:
 * Hardware:
 * Toolchain:
