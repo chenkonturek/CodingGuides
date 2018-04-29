@@ -1,10 +1,17 @@
+## Write a Pull Request 
+* Include purpose of this Pull Request 
+* Include a description of the changes proposed in the pull request
+* Include a reference to a related issue in your repository 
+* Be explicit on what feedback you want, if any 
+* Prefix of `WIP` in title, if the pull request is work in progress   
+
 ## Create a GitHub Pull Request Template  
 Create a file named `PULL_REQUEST_TEMPLATE.md` and place it one of three locations:
 * The root of your project
 * `.github` folder
 * `docs` folder
 
-Here are some example Pull Request templates: 
+Here is an example Pull Request template: 
 ```
 # Description
 
@@ -25,7 +32,7 @@ Please delete options that are not relevant.
 
 # How Has This Been Tested?
 
-- [ ] unit test fun1  
+- [ ] unit test fun1   
 - [ ] unit test fun2 
 
 **Test Configuration** [optional]:
@@ -48,13 +55,4 @@ Please delete options that are not relevant.
 
 
 
-## Write a Pull Request 
-
-* Include purpose of this Pull Request 
-* 
-
-
-A reference to a related issue in your repository.
-A description of the changes proposed in the pull request.
-@mentions of the person or team responsible for reviewing proposed changes.
 
