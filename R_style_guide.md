@@ -1,4 +1,4 @@
-## R : Style Guide 
+## R : Coding Style Guide 
 
 1. **File Names** : 
    * end in .R 
