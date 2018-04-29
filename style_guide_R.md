@@ -11,13 +11,14 @@
     * Assignment : use <- , not = 
     * Spacing: place spaces around all infix operators (e.g. =, +, -, <-, etc.)
     * Curly Braces: 
-```r     
-if (y == 0) {
-  message("Y is zero")
-} else {
-  message("Y is non-zero")
-}
-```
+    ```r     
+    if (y == 0) {
+      message("Y is zero")
+    } else {
+      message("Y is non-zero")
+    }
+    ```
+    
     * Line length : max 80 characters per line 
     * Indentation: two spaces, no tabs 
  4. **Comments**
