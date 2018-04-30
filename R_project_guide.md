@@ -4,10 +4,11 @@
    * end in .R 
    * prefix with numbers (e.g. `0-open.R`, `1-close.R`), if need to run in sequence  
 2. **Identifiers**: 
-    * variable and function names should be lowercase
-    * use underscore (_) or dot (.) to separate words 
     * variable names should be nouns 
     * funciton names should be verbs 
+    * be consistent with the appoach you take 
+       * Approach 1: variable and function names should be lowercase; use underscore (_) or dot (.) to separate words 
+       * Approach 2 (google): don't use _ in identifier names. Prefer `variable.name`, `FunctionName`.  
 3. **Syntax** 
     * Assignment : use <- , not = 
     * Spacing: 
