@@ -38,12 +38,33 @@
       * use `# =====` or `# ------` to separate code into meaningful truncks 
 
 
-## R : Structure Project 
+## R : Structure an R Package  
 http://r-pkgs.had.co.nz/package.html 
 http://www.mjdenny.com/R_Package_Pictorial.html 
 
 * ./project name 
-  * DESCRIPTION
+  * DESCRIPTION: 
+   ```
+    Package: xxx
+    Title: xxx
+    Version: xx
+    Authors@R: c(person("Surname", "Names", email = "email", role = c("aut", "cre")),
+                 person("Surname", "Names", email = "email", role = "ctb"))
+    Maintainer: xxx
+    Description: xxx
+    Depends: R (>= 3.2.3)
+    License: xxx 
+    LazyData: True
+    Imports: 
+       xxx (>= 0.2), 
+       xxx 
+    Suggests:
+       xxx (>= 0.3), 
+       xxx 
+    VignetteBuilder: xxx
+    RoxygenNote: xxx
+   ```
+ 
   * NAMESPACE 
   * README.md 
   * vignette.md 
@@ -53,3 +74,6 @@ http://www.mjdenny.com/R_Package_Pictorial.html
   * ./inst : 
 
 useful statements ...
+`install.packages("devtools")`
+`devtools::document()`
+`devtools::use_package()`
