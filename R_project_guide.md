@@ -35,3 +35,20 @@
     * Commenting guidelines 
       * Entire commented lines should begin with # and one space
       * use `# =====` or `# ------` to separate code into meaningful truncks 
+
+
+## R : Structure Project 
+http://r-pkgs.had.co.nz/package.html 
+http://www.mjdenny.com/R_Package_Pictorial.html 
+
+* ./project name 
+  * DESCRIPTION
+  * NAMESPACE 
+  * README.md 
+  * vignette.md 
+  * ./R : 
+  * ./src  : 
+  * ./data : 
+  * ./inst : 
+
+useful statements ...
