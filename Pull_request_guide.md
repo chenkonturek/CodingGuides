@@ -32,8 +32,8 @@ Please delete options that are not relevant.
 
 # How Has This Been Tested?
 
-- [ ] unit test fun1   
-- [ ] unit test fun2 
+- [ ] unit test of fun1   
+- [ ] unit test of fun2 
 
 **Test Configuration** [optional]:
 * Firmware version:
