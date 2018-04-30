@@ -41,17 +41,17 @@
 ## R : Structure an R Package  
 http://r-pkgs.had.co.nz/package.html 
 http://www.mjdenny.com/R_Package_Pictorial.html 
+http://r-pkgs.had.co.nz/description.html 
 
 * ./project name 
   * DESCRIPTION: 
    ```
-    Package: xxx
-    Title: xxx
+    Package: package name 
+    Title: one line description of the package
     Version: xx
     Authors@R: c(person("Surname", "Names", email = "email", role = c("aut", "cre")),
                  person("Surname", "Names", email = "email", role = "ctb"))
-    Maintainer: xxx
-    Description: xxx
+    Description: more detailed than the title, each line <80 characters, indent with 4 spaces for subsequent lines 
     Depends: R (>= 3.2.3)
     License: xxx 
     LazyData: True
@@ -60,9 +60,9 @@ http://www.mjdenny.com/R_Package_Pictorial.html
        xxx 
     Suggests:
        xxx (>= 0.3), 
-       xxx 
-    VignetteBuilder: xxx
-    RoxygenNote: xxx
+       knitr  
+    VignetteBuilder: knitr 
+    RoxygenNote: roxygen2 version 
    ```
  
   * NAMESPACE 
