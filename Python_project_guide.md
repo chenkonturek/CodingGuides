@@ -1,5 +1,6 @@
-## Python: Coding Style Guide 
+## Python: Struture Project 
 
+## Python: Coding Style Guide 
 
 1. **File Names** : 
    * end in .py 
@@ -31,7 +32,8 @@
       Preferably using ReST 'markup'.
       """
       ```
-
+      
+ 4. **Organisation** 
 
 https://www.python.org/dev/peps/pep-0008/
 
