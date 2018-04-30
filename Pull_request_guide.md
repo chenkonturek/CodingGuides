@@ -58,3 +58,4 @@ Please delete options that are not relevant.
 check list .... 
 
 
+https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/ 
