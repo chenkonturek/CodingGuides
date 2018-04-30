@@ -7,7 +7,7 @@
     * variable names should be nouns 
     * funciton names should be verbs 
     * select a style and be consistent with it 
-       * style option 1: variable and function names should be lowercase; use underscore (_) or dot (.) to separate words 
+       * style option 1: variable and function names should be lowercase; use _ or . to separate word.  
        * style option 2 (google): don't use _ in identifier names. Prefer `variable.name`, `FunctionName`.  
 3. **Syntax** 
     * Assignment : use <- , not = 
