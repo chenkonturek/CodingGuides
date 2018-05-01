@@ -38,9 +38,9 @@ This guide covers:
   ```
 
   * **environment.yml** and **.env** :  for enironment management with conda 
-      * **environment.yml** defines environment name, version of python to use, and dependencies. 
+      * **environment.yml** defines environment name (lowercase), python version, and dependencies. 
       ```
-      name: deeplearning 
+      name: ENV_NAME 
       channels:
       - defaults
       - conda-forge
@@ -50,13 +50,11 @@ This guide covers:
       - matplotlib=2.0.2
       - jupyter=1.0.0
       - numpy=1.13.1
-      - seaborn=0.8
-      - pymc3=3.1
       - pandas=0.20.3
-      - biopython=1.69
-      - rise=5.0.0
-      - environment_kernels=1.1
       - scipy=0.19.1
+      - pip
+      - pip: 
+        - xxx
       ```
 
       * create conda environment using `$ conda env create`, activate conda environment `$ source activate ENV_NAME`. 
@@ -65,11 +63,21 @@ This guide covers:
       source activate ENV_NAME
       ```
 
-  * **requirements.txt** : specifies the development dependencies 
+  * **requirements.txt** (not needed, if using conda environment management) 
+    * specifies the package dependencies  
+    ```
+    numpy==1.13
+    scipy==0.19.1
+    Flask==0.12.2
+    pandas==0.20.2
+    scikit_learn==0.18.2
+    ```
     * `$ pip install -r requirements.txt`  
+   
+    
   * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation)
     ```
-
+   
     ```
 
   * **packagename/** : contains package source code 
