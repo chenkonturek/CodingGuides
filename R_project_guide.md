@@ -1,7 +1,7 @@
 ## Overview
 This guide covers: 
-* [R : Structure an R Package]()  
-* [R : Coding Style Guide]()
+* [R : Structure an R Package](https://github.com/chenkonturek/CodingGuides/blob/master/R_project_guide.md#r--structure-an-r-package)  
+* [R : Coding Style Guide](https://github.com/chenkonturek/CodingGuides/blob/master/R_project_guide.md#r--coding-style-guide)
 
 ## R : Structure an R Package  
 * **./project name** 
