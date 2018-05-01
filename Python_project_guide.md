@@ -75,9 +75,21 @@ This guide covers:
     * `$ pip install -r requirements.txt`  
    
     
-  * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation)
+  * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation) during dev 
     ```
-   
+    init:
+      conda env create
+      
+    activate:   
+      source activate ENV_NAME
+
+    test:
+      py.test tests
+
+    doc: 
+      sphinx-apidoc -f -o source/ ../packagename/ 
+    
+    .PHONY: init test doc 
     ```
   * **.coveragerc** : A configuration file for coverage check. 
     ```
