@@ -69,7 +69,7 @@ This guide covers:
   ```
  
 * **packagename/** : package source code 
-  * \__init__.py
+  * \_\_init\_\_.py
   * module1.py
   * module2.py
 * **docs/** : contains package reference documentation 
