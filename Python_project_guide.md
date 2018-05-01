@@ -6,9 +6,37 @@ This guide covers:
 
 ## Python: Struture a Project 
 
-* **README.rst**
-* **LICENSE**
-* **setup.py**
+* **README.rst**: provides general information to both users and maintainers of a project 
+* **LICENSE**: [choose a license](http://choosealicense.com/)  
+* **setup.py** : package and distribution managment 
+```
+ # -*- coding: utf-8 -*-
+ from setuptools import setup, find_packages
+ 
+ with open('README.rst') as f:
+     readme = f.read()
+
+ with open('LICENSE') as f:
+     license = f.read()
+
+ setup(
+     name='packagename',
+     version='0.1.0',
+     description='Sample package for Python-Guide.org',
+     long_description=readme,
+     author='xxx xxx',
+     author_email='xx@xxx.com',
+     url='https://xxxx',
+     license=license,
+     packages=find_packages(exclude=('tests', 'docs')),
+     package_dir = {...},
+     install_requires = [...],
+     entry_points = {...},
+     extras_require = {...},
+     dependency_links = [...]
+ )
+```
+
 * **environment.yml**
 * **requirements.txt**
 * **packagename/** 
