@@ -125,7 +125,10 @@ This guide covers:
     * module1.py
     * module2.py
   * **docs/** : contains package reference documentation 
+    * generate documentation using `$ sphinx-apidoc -f -o source/ ../` and `$ make html`
+    
   * **tests/** : contains package integration and unit tests  
+    * test_xxx.py
 
 
 ## Python: Coding Style Guide 
