@@ -115,21 +115,9 @@ This guide covers:
   * **pytest.ini** : A configuration file for pytest.
     ```
     [pytest]
-
     addopts =
-        --strict
-        --pdbcls=tests:Debugger
-
-        --verbose --verbose
-        -r sxX
-
-        --cov={{packagename}}
-        --cov-report=html
-        --cov-report=term-missing:skip-covered
-        --no-cov-on-fail
-
-    cache_dir = .cache
-    markers =
+        --cov-config .coveragerc 
+        --cov=packagename
     ```
   
   * **packagename/** : contains package source code 
@@ -151,7 +139,8 @@ This guide covers:
    * class names: Camel case (e.g. `ClassName`) 
    * function names and variable names should be lower case, separate words with underscore (_) 
    * private function and variable, with prefix _  
-   
+
+
 3. **Syntax** 
     * Spacings:  
       * separate Functions and methods with 2 blank lines
@@ -180,6 +169,7 @@ This guide covers:
 * https://www.python.org/dev/peps/pep-0008/
 * https://www.python.org/dev/peps/pep-0020/
 * https://github.com/kennethreitz/samplemod 
+* http://pythontesting.net/framework/pytest/pytest-introduction/
 
 
 
