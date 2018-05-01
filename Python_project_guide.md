@@ -6,6 +6,19 @@ This guide covers:
 
 ## Python: Struture a Project 
 
+* **README.rst**
+* **LICENSE**
+* **setup.py**
+* **environment.yml**
+* **requirements.txt**
+* **packagename/** 
+      * __init__.py
+      * module1.py
+      * module2.py
+* **docs/**
+* **tests/**
+  
+
 ## Python: Coding Style Guide 
 
 1. **File Names** : 
