@@ -64,27 +64,16 @@ This guide covers:
 * **requirements.txt** : specifies the development dependencies 
   * `$ pip install -r requirements.txt`  
 * **Makefile** : generic mangement tasks (e.g. installation, test, documentation)
- ```
- TEST_PATH=./
-
- clean-pyc:
-     find . -name '*.pyc' -exec rm --force {} +
-     find . -name '*.pyo' -exec rm --force {} +
-    name '*~' -exec rm --force  {} 
-
- lint:
-     flake8 --exclude=.tox
-
- test: clean-pyc
-     py.test --verbose --color=yes $(TEST_PATH)
- ```
+  ```
+  
+  ```
  
-* **packagename/** 
+* **packagename/** : package source code 
   * __init__.py
   * module1.py
   * module2.py
-* **docs/**
-* **tests/**
+* **docs/** : contains package reference documentation 
+* **tests/** : contains package integration and unit tests  
   
 
 ## Python: Coding Style Guide 
