@@ -108,10 +108,30 @@ This guide covers:
     [html]
     directory = coverage_html_report
     ```
+    
     * `$ coverage run my_program.py arg1 arg2`
     * `$ coverage report -m` 
     * Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
-    
+  * **pytest.ini** : A configuration file for pytest.
+   ```
+   [pytest]
+
+   addopts =
+       --strict
+       --pdbcls=tests:Debugger
+
+       --verbose --verbose
+       -r sxX
+
+       --cov={{packagename}}
+       --cov-report=html
+       --cov-report=term-missing:skip-covered
+       --no-cov-on-fail
+
+  cache_dir = .cache
+  markers =
+  ```
+  
   * **packagename/** : contains package source code 
     * \_\_init\_\_.py
     * module1.py
