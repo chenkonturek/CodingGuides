@@ -1,4 +1,10 @@
-## Python: Struture Project 
+## Overview
+This guide covers: 
+* [Python: Struture a Project](https://github.com/chenkonturek/CodingGuides/blob/master/Python_project_guide.md#python-struture-project)  
+* [Python: Coding Style Guide](https://github.com/chenkonturek/CodingGuides/blob/master/Python_project_guide.md#python-coding-style-guide)
+
+
+## Python: Struture a Project 
 
 ## Python: Coding Style Guide 
 
