@@ -61,8 +61,24 @@ This guide covers:
     - scipy=0.19.1
     ```
   
-* **requirements.txt**
+* **requirements.txt** : specifies the development dependencies 
+  * `$ pip install -r requirements.txt`  
+* **Makefile** : generic mangement tasks (e.g. installation, test, documentation)
+ ```
+ TEST_PATH=./
 
+ clean-pyc:
+     find . -name '*.pyc' -exec rm --force {} +
+     find . -name '*.pyo' -exec rm --force {} +
+    name '*~' -exec rm --force  {} 
+
+ lint:
+     flake8 --exclude=.tox
+
+ test: clean-pyc
+     py.test --verbose --color=yes $(TEST_PATH)
+ ```
+ 
 * **packagename/** 
   * __init__.py
   * module1.py
