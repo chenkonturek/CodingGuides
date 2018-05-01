@@ -37,8 +37,32 @@ This guide covers:
  )
 ```
 
-* **environment.yml**
+* **environment.yml** and **.env** :  
+    * **environment.yml** defines environment name, version of python to use, and dependencies. 
+    * create conda environment using `$ conda env create`, activate conda environment `$ source activate ENV_NAME`. 
+    * **.env** : contains the line `$ source activate ENV_NAME`. make sure `autoenv` is installed.  
+    ```
+    name: deeplearning 
+    channels:
+    - defaults
+    - conda-forge
+    - ericmjl
+    dependencies:
+    - python=3.6
+    - matplotlib=2.0.2
+    - jupyter=1.0.0
+    - numpy=1.13.1
+    - seaborn=0.8
+    - pymc3=3.1
+    - pandas=0.20.3
+    - biopython=1.69
+    - rise=5.0.0
+    - environment_kernels=1.1
+    - scipy=0.19.1
+    ```
+  
 * **requirements.txt**
+
 * **packagename/** 
   * __init__.py
   * module1.py
@@ -86,6 +110,7 @@ This guide covers:
 * http://docs.python-guide.org/en/latest/
 * https://www.python.org/dev/peps/pep-0008/
 * https://www.python.org/dev/peps/pep-0020/
+* https://github.com/kennethreitz/samplemod 
 
 
 
