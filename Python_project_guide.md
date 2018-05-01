@@ -67,12 +67,12 @@ This guide covers:
     
 * **requirements.txt** : specifies the development dependencies 
   * `$ pip install -r requirements.txt`  
-* **Makefile** : generic mangement tasks (e.g. installation, test, documentation)
+* **Makefile** : for generic mangement tasks (e.g. installation, test, documentation)
   ```
   
   ```
  
-* **packagename/** : package source code 
+* **packagename/** : contains package source code 
   * \_\_init\_\_.py
   * module1.py
   * module2.py
