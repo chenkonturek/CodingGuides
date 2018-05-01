@@ -40,7 +40,6 @@ This guide covers:
 * **environment.yml** and **.env** :  
     * **environment.yml** defines environment name, version of python to use, and dependencies. 
     * create conda environment using `$ conda env create`, activate conda environment `$ source activate ENV_NAME`. 
-    * **.env** : contains the line `$ source activate ENV_NAME`. make sure `autoenv` is installed.  
     ```
     name: deeplearning 
     channels:
@@ -60,7 +59,12 @@ This guide covers:
     - environment_kernels=1.1
     - scipy=0.19.1
     ```
-  
+    
+    * **.env**: this file will automatically run when navigate to the project folder in termal, if [autoenv](https://github.com/kennethreitz/autoenv ) is installed. Thus the envoronment will be automatically activated.  
+    ```
+    source activate ENV_NAME
+    ```
+    
 * **requirements.txt** : specifies the development dependencies 
   * `$ pip install -r requirements.txt`  
 * **Makefile** : generic mangement tasks (e.g. installation, test, documentation)
