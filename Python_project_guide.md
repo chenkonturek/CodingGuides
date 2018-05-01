@@ -37,7 +37,7 @@ This guide covers:
  )
 ```
 
-* **environment.yml** and **.env** :  
+* **environment.yml** and **.env** :  for enironment management with conda 
     * **environment.yml** defines environment name, version of python to use, and dependencies. 
     * create conda environment using `$ conda env create`, activate conda environment `$ source activate ENV_NAME`. 
     ```
