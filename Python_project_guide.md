@@ -9,7 +9,7 @@ This guide covers:
 * **README.rst**: provides general information to both users and maintainers of a project 
 * **LICENSE**: [choose a license](http://choosealicense.com/)  
 * **setup.py** : package and distribution managment 
-```
+```python
  # -*- coding: utf-8 -*-
  from setuptools import setup, find_packages
  
