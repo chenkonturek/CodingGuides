@@ -89,7 +89,7 @@ This guide covers:
     doc: 
       sphinx-apidoc -f -o source/ ../packagename/ 
     
-    .PHONY: init test doc 
+    .PHONY: init activate test doc 
     ```
   * **.coveragerc** : A configuration file for coverage check. 
     ```
