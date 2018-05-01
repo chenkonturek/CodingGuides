@@ -79,7 +79,39 @@ This guide covers:
     ```
    
     ```
+  * **.coveragerc** : A configuration file for coverage check. 
+    ```
+    [run]
+    branch = true
+    omit = */tests/*
 
+    [report]
+    # Regexes for lines to exclude from consideration
+    exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+    # Don't complain about missing debug-only code:
+    def __repr__
+    if self\.debug
+
+    # Don't complain if tests don't hit defensive assertion code:
+    raise AssertionError
+    raise NotImplementedError
+
+    # Don't complain if non-runnable code isn't run:
+    if 0:
+    if __name__ == .__main__.:
+
+    ignore_errors = False
+
+    [html]
+    directory = coverage_html_report
+    ```
+    * `$ coverage run my_program.py arg1 arg2`
+    * `$ coverage report -m` 
+    * Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
+    
   * **packagename/** : contains package source code 
     * \_\_init\_\_.py
     * module1.py
