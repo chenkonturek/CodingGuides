@@ -12,9 +12,9 @@ This guide covers:
 * **environment.yml**
 * **requirements.txt**
 * **packagename/** 
-      * __init__.py
-      * module1.py
-      * module2.py
+  * __init__.py
+  * module1.py
+  * module2.py
 * **docs/**
 * **tests/**
   
