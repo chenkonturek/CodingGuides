@@ -101,7 +101,7 @@ This guide covers:
      find . -name '*.pyc' -delete  
     ```
     * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`.
-    * generate pylint configuration file using `pylint --generate-rcfile > ~/.pylintrc`
+    * generate pylint configuration file using `pylint --generate-rcfile > ~/packagename/.pylintrc`
     * note: make sure using a tab, not 4 spaces, inside the Makefile.    
   * **.coveragerc** : A configuration file for coverage check. 
     ```
