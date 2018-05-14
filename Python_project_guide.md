@@ -95,7 +95,10 @@ This guide covers:
      py.test tests
 
     doc: 
-     sphinx-apidoc -f -o source/ ../packagename/ 
+     sphinx-apidoc -f -o ./docs/source/ ./
+
+    html: 
+     sphinx-build -b html ./docs/source/ ./docs/build
 
     lint: 
      pylint datamule 
