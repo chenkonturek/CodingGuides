@@ -74,8 +74,9 @@ This guide covers:
     ```
     * `$ pip install -r requirements.txt`  
    
-  * .pylintrc: a pylint configuration file  
-     * generate a pylint configuration file using `pylint --generate-rcfile > ~/packagename/.pylintrc`
+  * **.pylintrc**: a pylint configuration file  
+     * generate a pylint configuration file using `pylint --generate-rcfile > ~/projectname/.pylintrc`
+     * can either put this config file under the project folder or in your home directory. 
    
   * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation) during dev 
     ```
