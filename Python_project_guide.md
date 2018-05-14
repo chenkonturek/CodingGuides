@@ -215,7 +215,7 @@ This guide covers:
 * https://www.python.org/dev/peps/pep-0020/
 * https://github.com/kennethreitz/samplemod 
 * http://pythontesting.net/framework/pytest/pytest-introduction/
-
+* http://assorted-experience.blogspot.co.uk/2014/07/use-numpydoc-sphinx.html
 
 
 
