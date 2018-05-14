@@ -77,22 +77,32 @@ This guide covers:
     
   * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation) during dev 
     ```
-    init:
-      conda env create
-      
+    .PHONY: init-conda init-pip activate test doc lint clean
+
+    init-conda:
+     conda env create
+
+    init-pip:
+     pip install -r requirements.txt
+
     activate:   
-      source activate ENV_NAME
+     source activate datamule-env
 
     test:
-      py.test tests
+     py.test tests
 
     doc: 
-      sphinx-apidoc -f -o source/ ../packagename/ 
-    
-    .PHONY: init activate test doc 
+     sphinx-apidoc -f -o source/ ../packagename/ 
+
+    lint: 
+     pylint datamule 
+
+    clean: 
+     find . -name '*.pyc' -delete  
     ```
-    * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`. 
-    * note: make sure using a tab, not 4 spaces, inside the Makefile. 
+    * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`.
+    * generate pylint configuration file using `pylint --generate-rcfile > ~/.pylintrc`
+    * note: make sure using a tab, not 4 spaces, inside the Makefile.    
   * **.coveragerc** : A configuration file for coverage check. 
     ```
     [run]
@@ -143,7 +153,7 @@ This guide covers:
     
   * **tests/** : contains package integration and unit tests  
     * test_xxx.py
-
+  
 
 ## Python: Coding Style Guide 
 
