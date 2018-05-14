@@ -14,7 +14,6 @@ This guide covers:
    from setuptools import setup, find_packages
 
    with open('README.rst') as f:
-       readme = f.read()
 
    with open('LICENSE') as f:
        license = f.read()
@@ -101,7 +100,7 @@ This guide covers:
      sphinx-build -b html ./docs/source/ ./docs/build
 
     lint: 
-     pylint datamule 
+     pylint packagename 
 
     clean: 
      find . -name '*.pyc' -delete  
