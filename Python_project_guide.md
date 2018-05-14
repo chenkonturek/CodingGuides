@@ -151,7 +151,8 @@ This guide covers:
     * module1.py
     * module2.py
   * **docs/** : contains package reference documentation 
-    * generate documentation using `$ sphinx-apidoc -f -o source/ ../` and `$ make html`
+    * **source/**: contains rst doc files, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`
+    * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
     
   * **tests/** : contains package integration and unit tests  
     * test_xxx.py
