@@ -186,7 +186,7 @@ This guide covers:
     * Comments 
       * Block Comments  
       * Inline Comments   
-      * Docstrings: 
+      * Docstrings: (e.g. using numpydoc version of docstring)
       ```python 
       def function_class_or_method(object):
       """
