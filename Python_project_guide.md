@@ -86,7 +86,7 @@ This guide covers:
      pip install -r requirements.txt
 
     activate:   
-     source activate datamule-env
+     source activate ENV_NAME
 
     test:
      py.test tests
