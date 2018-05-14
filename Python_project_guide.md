@@ -103,7 +103,10 @@ This guide covers:
      pylint packagename 
 
     clean: 
-     find . -name '*.pyc' -delete  
+     find . -name '*.pyc' -exec rm -f {} +
+     find . -name '*.pyo' -exec rm -f {} +
+     find . -name '*~' -exec rm -f {} +
+     find . -name '__pycache__' -exec rm -fr {}  
     ```
     * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`.
     * note: make sure using a tab, not 4 spaces, inside the Makefile.    
