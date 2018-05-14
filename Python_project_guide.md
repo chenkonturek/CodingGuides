@@ -190,9 +190,20 @@ This guide covers:
       ```python 
       def function_class_or_method(object):
       """
-      Several lines of docstring.
+      Summary line.
 
-      Preferably using ReST 'markup'.
+      Extended description of function/class.
+ 
+      Parameters
+      ----------
+      arg1 : boolean (default: ``True``)
+          Description of arg1 
+
+      
+      Returns
+      ------- 
+      int 
+          Description of return value 
       """
       ```
       
