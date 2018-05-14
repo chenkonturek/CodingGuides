@@ -154,9 +154,11 @@ This guide covers:
     * module1.py
     * module2.py
   * **docs/** : contains package reference documentation 
-    * **source/**: contains rst doc files, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`
+    * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
+    * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`. This directory also contains the Sphix configuration file `config.py`.  
     * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
-    
+    * **_static**: for custom stylesheets and other static files 
+    * **_templates**: for custom HTML templates 
   * **tests/** : contains package integration and unit tests  
     * test_xxx.py
   
