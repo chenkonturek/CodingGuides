@@ -91,6 +91,8 @@ This guide covers:
     
     .PHONY: init activate test doc 
     ```
+    * can run each part by: `$ make test`
+    * note: make sure using a tab, not 4 spaces, inside the Makefile. 
   * **.coveragerc** : A configuration file for coverage check. 
     ```
     [run]
