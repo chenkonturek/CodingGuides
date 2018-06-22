@@ -6,14 +6,14 @@ This guide covers:
 
 ## Python: Struture a Project 
 * **projectname/**
-  * **README.rst**: provides general information to both users and maintainers of a project 
+  * **README.md**: provides general information (e.g. Installation, Repo Contents, Links to User Guide and APIs) to both users and maintainers of a project 
   * **LICENSE**: [choose a license](http://choosealicense.com/)  
   * **setup.py** : package and distribution managment 
   ```python
    # -*- coding: utf-8 -*-
    from setuptools import setup, find_packages
 
-   with open('README.rst') as f:
+   with open('README.md') as f:
 
    with open('LICENSE') as f:
        license = f.read()
@@ -23,18 +23,62 @@ This guide covers:
        version='0.1.0',
        description='Sample package for Python-Guide.org',
        long_description=readme,
-       author='xxx xxx',
-       author_email='xx@xxx.com',
+       author='xxx, xxx',
+       author_email='xx@xxx.com, xx@xxx.com',
        url='https://xxxx',
        license=license,
-       packages=find_packages(exclude=('tests', 'docs')),
-       package_dir = {...},
-       install_requires = [...],
-       entry_points = {...},
-       extras_require = {...},
-       dependency_links = [...]
+       packages=find_packages(exclude=('tests', 'docs'))
    )
   ```
+
+  * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation) during dev 
+    ```
+    .PHONY: init-conda init-pip activate test doc html lint clean
+
+    init-conda:
+	      conda env create
+	
+    init-pip:
+	      pip install -r requirements.txt
+  
+    activate:   
+	      source activate datamule-env
+
+    test:
+	      py.test tests
+
+    doc: 
+	      sphinx-apidoc -f -o ./docs/source/ ./datamule/
+
+    html: 
+	      sphinx-build -b html ./docs/source/ ./docs/build
+
+    lint: 
+	      pylint datamule 
+
+    clean: 
+	      find . -name '*.pyc' -exec rm -f {} +
+	      find . -name '*.pyo' -exec rm -f {} +
+	      find . -name '*~' -exec rm -f {} +
+	      find . -name '__pycache__' -exec rm -fr {} +
+    ```
+    * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`.
+    * note: make sure using a tab, not 4 spaces, inside the Makefile.    
+    
+  * **packagename/** : contains package source code 
+    * \_\_init\_\_.py
+    * module1.py
+    * module2.py
+  * **docs/** : contains package reference documentation 
+    * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
+    * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`. This directory also contains the Sphix configuration file `config.py`.  
+    * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
+    * **_static**: for custom stylesheets and other static files 
+    * **_templates**: for custom HTML templates 
+  * **tests/** : contains package integration and unit tests  
+    * \_\_init\_\_.py
+    * test_module1.py
+    * test_module2.py      
 
   * **environment.yml** and **.env** :  for enironment management with conda 
       * **environment.yml** defines environment name (lowercase), python version, and dependencies. 
@@ -72,45 +116,12 @@ This guide covers:
     scikit_learn==0.18.2
     ```
     * `$ pip install -r requirements.txt`  
-   
+    
   * **.pylintrc**: a pylint configuration file  
      * generate a pylint configuration file using `pylint --generate-rcfile > ~/projectname/.pylintrc`
      * can either put this config file under the project folder or in your home directory. 
-   
-  * **Makefile** : for generic mangement tasks (e.g. installation, test, documentation) during dev 
-    ```
-    .PHONY: init-conda init-pip activate test doc lint clean
-
-    init-conda:
-     conda env create
-
-    init-pip:
-     pip install -r requirements.txt
-
-    activate:   
-     source activate ENV_NAME
-
-    test:
-     py.test tests
-
-    doc: 
-     sphinx-apidoc -f -o ./docs/source/ ./
-
-    html: 
-     sphinx-build -b html ./docs/source/ ./docs/build
-
-    lint: 
-     pylint packagename 
-
-    clean: 
-     find . -name '*.pyc' -exec rm -f {} +
-     find . -name '*.pyo' -exec rm -f {} +
-     find . -name '*~' -exec rm -f {} +
-     find . -name '__pycache__' -exec rm -fr {}  
-    ```
-    * can run each part by using `$ make` command in shell, e.g. `$ make doc` or `$ make test`.
-    * note: make sure using a tab, not 4 spaces, inside the Makefile.    
-  * **.coveragerc** : A configuration file for coverage check. 
+     
+  * **.coveragerc** : A configuration file for coverage check.   
     ```
     [run]
     branch = true
@@ -143,27 +154,13 @@ This guide covers:
     * `$ coverage run my_program.py arg1 arg2`
     * `$ coverage report -m` 
     * Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
-  * **pytest.ini** : A configuration file for pytest.
+  * **pytest.ini** : A configuration file for pytest.  
     ```
     [pytest]
     addopts =
         --cov-config .coveragerc 
         --cov=packagename
     ```
-  
-  * **packagename/** : contains package source code 
-    * \_\_init\_\_.py
-    * module1.py
-    * module2.py
-  * **docs/** : contains package reference documentation 
-    * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
-    * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`. This directory also contains the Sphix configuration file `config.py`.  
-    * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
-    * **_static**: for custom stylesheets and other static files 
-    * **_templates**: for custom HTML templates 
-  * **tests/** : contains package integration and unit tests  
-    * test_xxx.py
-  
 
 ## Python: Coding Style Guide 
 
