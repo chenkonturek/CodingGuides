@@ -176,7 +176,7 @@ This guide covers:
        # To suppresses a bunch of warnings
        numpydoc_show_class_members = False
        
-       html_theme = 'classic'
+       html_theme = 'classic' # or the third party theme: sphinx_rtd_theme, which needs: pip install sphinx_rtd_theme
        ```  
        
     * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
