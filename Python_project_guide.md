@@ -104,6 +104,7 @@ This guide covers:
     * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
        * **_static**: for custom stylesheets and other static files 
        * **_templates**: for custom HTML templates 
+    * **.nojekyll**: bypass Jekyll processing 
     * **index.html**: a file to redirect the link to the index file inside docs/build/ folder. This is needed to publish API docs on Github using Github Pages (in Github Settings). 
     ```html
     <!DOCTYPE HTML>
