@@ -103,7 +103,7 @@ This guide covers:
     
     class TestFlower(object): 
        def setup_method(self, method): 
-           self.logfile = xxx 
+           self.file = xxx 
 	   self.data = xxx 
 	   
        def test_xxxx(self):
@@ -118,8 +118,8 @@ This guide covers:
                 xxxx 	   
 		
        def teardown_method(self, method):
-            if os.path.exists(self.logfile):
-                 os.remove(self.logfile)   
+            if os.path.exists(self.file):
+                 os.remove(self.file)   
     ```
     * test_module2.py      
 
