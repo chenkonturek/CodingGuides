@@ -73,8 +73,27 @@ This guide covers:
     * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
     * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`. This directory also contains the Sphix configuration file `config.py`.  
     * **build/**: contains html files, produced by `sphinx-build -b html ./docs/source/ ./docs/build` or `$ make html`
-    * **_static**: for custom stylesheets and other static files 
-    * **_templates**: for custom HTML templates 
+       * **_static**: for custom stylesheets and other static files 
+       * **_templates**: for custom HTML templates 
+    * **index.html**: a file to redirect the link to the index file inside docs/build/ folder. This is needed to publish API docs on Github using Github Pages (in Github Settings). 
+    ```
+    <!DOCTYPE HTML>
+    <html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="1;url=build/index.html">
+        <script type="text/javascript">
+            window.location.href = "build/index.html"
+        </script>
+        <title>Page Redirection</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow the <a href='build/index.html'>link here.</a>
+    </body>
+    </html>    
+    ```
+    
   * **tests/** : contains package integration and unit tests  
     * \_\_init\_\_.py
     * test_module1.py
