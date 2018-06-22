@@ -67,8 +67,37 @@ This guide covers:
     
   * **packagename/** : contains package source code 
     * \_\_init\_\_.py
-    * module1.py
-    * module2.py
+    * flower.py
+    
+  * **tests/** : contains package integration and unit tests  
+    * \_\_init\_\_.py
+    * test_flower.py
+    ```python 
+    """Tests for functions in flower.py."""
+    import pytest 
+    import packagename.flower
+    
+    class TestFlower(object): 
+       def setup_method(self, method): 
+           self.file = xxx 
+	   self.data = xxx 
+	   
+       def test_xxxx(self):
+           assert xxx == xxx
+       
+       def test_print_xxxx(self, capsys):
+           out, err = capsys.readouterr()  
+           assert xxx == xxx    
+	
+	def test_errors_xxx(self): 
+            with pytest.raises(ValueError):
+                xxxx 	   
+		
+       def teardown_method(self, method):
+            if os.path.exists(self.file):
+                 os.remove(self.file)   
+    ```   
+
   * **docs/** : contains package reference documentation 
     * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
     * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`. This directory also contains the Sphix configuration file `config.py`.  
@@ -94,35 +123,6 @@ This guide covers:
     </html>    
     ```
     
-  * **tests/** : contains package integration and unit tests  
-    * \_\_init\_\_.py
-    * test_module1.py
-    ```python 
-    import pytest 
-    import packagename.module1
-    
-    class TestFlower(object): 
-       def setup_method(self, method): 
-           self.file = xxx 
-	   self.data = xxx 
-	   
-       def test_xxxx(self):
-           assert xxx == xxx
-       
-       def test_print_xxxx(self, capsys):
-           out, err = capsys.readouterr()  
-           assert xxx == xxx    
-	
-	def test_errors_xxx(self): 
-            with pytest.raises(ValueError):
-                xxxx 	   
-		
-       def teardown_method(self, method):
-            if os.path.exists(self.file):
-                 os.remove(self.file)   
-    ```
-    * test_module2.py      
-
   * **environment.yml** and **.env** :  for enironment management with conda 
       * **environment.yml** defines environment name (lowercase), python version, and dependencies. 
       ```
