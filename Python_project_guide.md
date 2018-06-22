@@ -157,7 +157,7 @@ This guide covers:
     * `$ sphinx-quickstar` can be used to create source directory and build directory. In addition, this also produces config file and 2 more folders with your chosen prefix (e.g. _) under the source directory. 
     * **source/**: contains rst doc sources, produced by `$ sphinx-apidoc -f -o ./docs/source/ ./` or `$ make doc`.  
        * **config.py**: the Sphix configuration file .There are a few things need to add or modify, e.g.:  
-       ```
+       ```python
        import os
        import sys
        sys.path.insert(0, os.path.abspath('../../'))
