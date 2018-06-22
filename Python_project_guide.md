@@ -80,7 +80,7 @@ This guide covers:
     class TestFlower(object): 
        def setup_method(self, method): 
            self.file = xxx 
-	   self.data = xxx 
+           self.data = xxx 
 	   
        def test_xxxx(self):
            assert xxx == xxx
@@ -89,7 +89,7 @@ This guide covers:
            out, err = capsys.readouterr()  
            assert xxx == xxx    
 	
-	def test_errors_xxx(self): 
+       def test_errors_xxx(self): 
             with pytest.raises(ValueError):
                 xxxx 	   
 		
