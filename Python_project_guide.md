@@ -68,6 +68,61 @@ This guide covers:
   * **packagename/** : contains package source code 
     * \_\_init\_\_.py
     * flower.py
+    ```python 
+    """This module implements the Flower class."""
+    import six
+    
+   
+    class Flower(): 
+        """
+        An Flower Class that ...  
+    
+        An Flower object ..... 
+    
+        Parameters
+        ----------
+        name: string    
+            Flower name.  
+    """    
+	def __init__(self, flower_name, flower_type):   
+            if isinstance(flower_name, six.string_types):  
+                self._name = flower_name
+            else: 
+                raise ValueError('Invalid name! Must be a string.')
+		
+        @property
+        def name(self): 
+            """
+            Get Flower name. 
+            """
+            return self._name 
+        
+
+        @name.setter
+        def name(self, value): 
+            """
+            Set Flower name 
+            """
+            if isinstance(value, six.string_types):
+                self._name = value   
+            else: 
+                raise ValueError('Invalid value for name! Must be a string.')
+	
+	
+        def __repr__(self): 
+             return str(self.__dict__)		
+	  
+	  
+        def __str__(self):
+             return "Flower: name is %s" % (self.name)	 
+	     
+	     
+        def __eq__(self):
+             return self.__dict__ == other.__dict__
+	     
+	## other functions ....
+	     
+    ```
     
   * **tests/** : contains package integration and unit tests  
     * \_\_init\_\_.py
