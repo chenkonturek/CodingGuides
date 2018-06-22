@@ -76,7 +76,7 @@ This guide covers:
        * **_static**: for custom stylesheets and other static files 
        * **_templates**: for custom HTML templates 
     * **index.html**: a file to redirect the link to the index file inside docs/build/ folder. This is needed to publish API docs on Github using Github Pages (in Github Settings). 
-    ```
+    ```html
     <!DOCTYPE HTML>
     <html lang="en-US">
     <head>
@@ -97,6 +97,30 @@ This guide covers:
   * **tests/** : contains package integration and unit tests  
     * \_\_init\_\_.py
     * test_module1.py
+    ```python 
+    import pytest 
+    import packagename.module1
+    
+    class TestFlower(object): 
+       def setup_method(self, method): 
+           self.logfile = xxx 
+	   self.data = xxx 
+	   
+       def test_xxxx(self):
+           assert xxx == xxx
+       
+       def test_print_xxxx(self, capsys):
+           out, err = capsys.readouterr()  
+           assert xxx == xxx    
+	
+	def test_errors_xxx(self): 
+            with pytest.raises(ValueError):
+                xxxx 	   
+		
+       def teardown_method(self, method):
+            if os.path.exists(self.logfile):
+                 os.remove(self.logfile)   
+    ```
     * test_module2.py      
 
   * **environment.yml** and **.env** :  for enironment management with conda 
